@@ -15,7 +15,6 @@ public class Rol {
 
     @Enumerated(EnumType.STRING)
     @NotNull
-    @Column(unique = false)
     private RolNombre rolNombre;
 
     public Rol() {
