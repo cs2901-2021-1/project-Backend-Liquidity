@@ -23,25 +23,21 @@ public class Usuario {
     @Column(name = "email", nullable = false)
     private String email;
 
-    @Column(name="role_id", nullable = false)
-    private String role_id;
 
     @ManyToOne
     @JoinColumn (name = "role_id", nullable = false)
-    private Roles rol;
-
-    private String roleName;
+    private Roles role_id;
 
     public Usuario(){
 
     }
 
-    public Usuario( int id , String name,  String surname, String email, String roleName) {
+    public Usuario( int id , String name,  String surname, String email, Roles role_id) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.email = email;
-        this.roleName = roleName;
+        this.role_id = role_id;
     }
     public int getId() {
         return id;
@@ -75,27 +71,21 @@ public class Usuario {
         this.email = email;
     }
 
-    public String getRole_id() {
+    public Roles getRole_id() {
         return role_id;
     }
 
-    public void setRole_id(String role_id) {
+    public void setRole_id(Roles role_id) {
         this.role_id = role_id;
     }
 
     public Roles getRol() {
-        return rol;
+        return role_id;
     }
 
-    public void setRol(Roles rol) {
-        this.rol = rol;
+    public void setRol(Roles role_id) {
+        this.role_id = role_id;
     }
 
-    public String getRoleName() {
-        return roleName;
-    }
 
-    public void setRoleName(String roleName) {
-        this.roleName = roleName;
-    }
 }
