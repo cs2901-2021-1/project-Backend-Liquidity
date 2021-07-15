@@ -23,7 +23,7 @@ public class Usuario {
     @Column(name = "email", nullable = false)
     private String email;
 
-
+//Ver como es lo de foreign key
     @ManyToOne
     @JoinColumn (name = "role_id", nullable = false)
     private Roles role_id;
