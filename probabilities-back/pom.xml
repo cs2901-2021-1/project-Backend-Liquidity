@@ -9,10 +9,10 @@
 		<relativePath/>
 		<!--  lookup parent from repository  -->
 	</parent>
-	<groupId>com.tutorial</groupId>
-	<artifactId>login-social-back</artifactId>
+	<groupId>com.probabilities</groupId>
+	<artifactId>probabilities-back</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>login-social-back</name>
+	<name>probabilities-back</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<sonar.projectKey>cs2901-2021-1_project-Backend-Liquidity</sonar.projectKey>
