@@ -2,13 +2,13 @@ package com.probabilities.probabilitiesback.dto;
 
 public class TokenDto {
 
-    String Value;
+    String value;
 
     public String getValue() {
-        return Value;
+        return value;
     }
 
     public void setValue(String value) {
-        Value = value;
+        this.value = value;
     }
 }

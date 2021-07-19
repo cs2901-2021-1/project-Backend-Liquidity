@@ -5,62 +5,41 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.sun.istack.NotNull;
+
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
-@Table(name = "users")
 public class Usuario {
-
-
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    @Column(name = "name", nullable = false)
-    private String name;
-
-    @Column(name="surname", nullable = false)
-    private String surname;
-
-    @Column(name = "email", nullable = false)
+    @NotNull
+    @Column(unique = true)
     private String email;
+    @NotNull
+    private String password;
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(joinColumns = @JoinColumn(name = "usuario_id", referencedColumnName = "id" ),
+            inverseJoinColumns = @JoinColumn(name = "rol_id", referencedColumnName = "id"))
+    private Set<Roles> roles = new HashSet<>();
 
-//Ver como es lo de foreign key
-    @ManyToOne
-    @JoinColumn (name = "role_id", nullable = false)
-    private Roles role_id;
-
-    public Usuario(){
-
+    public Usuario() {
     }
 
-    public Usuario( int id , String name,  String surname, String email, Roles role_id) {
-        this.id = id;
-        this.name = name;
-        this.surname = surname;
+    public Usuario(String email, String password) {
         this.email = email;
-        this.role_id = role_id;
+        this.password = password;
     }
+
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
     }
 
     public String getEmail() {
@@ -71,21 +50,20 @@ public class Usuario {
         this.email = email;
     }
 
-    public Roles getRole_id() {
-        return role_id;
+    public String getPassword() {
+        return password;
     }
 
-    public void setRole_id(Roles role_id) {
-        this.role_id = role_id;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public Roles getRol() {
-        return role_id;
+    public Set<Roles> getRoles() {
+        return roles;
     }
 
-    public void setRol(Roles role_id) {
-        this.role_id = role_id;
+    public void setRoles(Set<Roles> roles) {
+        this.roles = roles;
     }
-
 
 }
