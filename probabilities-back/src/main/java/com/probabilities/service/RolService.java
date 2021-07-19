@@ -1,9 +1,8 @@
-package com.probabilities.probabilitiesback.services;
+package com.probabilities.service;
 
-import com.probabilities.probabilitiesback.entity.Roles;
-import com.probabilities.probabilitiesback.enums.RolNombre;
-import com.probabilities.probabilitiesback.repository.RolRepository;
-
+import com.probabilities.entity.Rol;
+import com.probabilities.enums.RolNombre;
+import com.probabilities.repository.RolRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,7 +16,7 @@ public class RolService {
     @Autowired
     RolRepository rolRepository;
 
-    public Optional<Roles> getByRolNombre(RolNombre rolNombre){
+    public Optional<Rol> getByRolNombre(RolNombre rolNombre){
         return rolRepository.findByRolNombre(rolNombre);
     }
 
@@ -25,7 +24,7 @@ public class RolService {
         return rolRepository.existsByRolNombre(rolNombre);
     }
 
-    public void save(Roles rol){
+    public void save(Rol rol){
         rolRepository.save(rol);
     }
 }

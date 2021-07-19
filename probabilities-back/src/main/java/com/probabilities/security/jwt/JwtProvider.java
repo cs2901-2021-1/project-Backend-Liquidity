@@ -1,6 +1,6 @@
-package com.probabilities.probabilitiesback.security.jwt;
+package com.probabilities.security.jwt;
 
-import com.probabilities.probabilitiesback.security.UsuarioPrincipal;
+import com.probabilities.security.UsuarioPrincipal;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

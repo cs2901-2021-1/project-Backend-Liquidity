@@ -1,4 +1,4 @@
-package com.probabilities.probabilitiesback.dto;
+package com.probabilities.dto;
 
 public class TokenDto {
 

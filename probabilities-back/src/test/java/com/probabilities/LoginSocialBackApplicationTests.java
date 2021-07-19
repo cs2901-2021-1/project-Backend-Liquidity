@@ -1,10 +1,10 @@
-package com.probabilities.probabilitiesback;
+package com.tutorial.loginsocialback;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProbabilitiesBackApplicationTests {
+class LoginSocialBackApplicationTests {
 
 	@Test
 	void contextLoads() {

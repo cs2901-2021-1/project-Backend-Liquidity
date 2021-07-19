@@ -1,9 +1,4 @@
-package com.probabilities.probabilitiesback.entity;
-
-import com.sun.istack.NotNull;
-import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
+package com.probabilities.entity;
 
 import com.sun.istack.NotNull;
 
@@ -23,8 +18,8 @@ public class Usuario {
     private String password;
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(joinColumns = @JoinColumn(name = "usuario_id", referencedColumnName = "id" ),
-            inverseJoinColumns = @JoinColumn(name = "rol_id", referencedColumnName = "id"))
-    private Set<Roles> roles = new HashSet<>();
+    inverseJoinColumns = @JoinColumn(name = "rol_id", referencedColumnName = "id"))
+    private Set<Rol> roles = new HashSet<>();
 
     public Usuario() {
     }
@@ -58,12 +53,11 @@ public class Usuario {
         this.password = password;
     }
 
-    public Set<Roles> getRoles() {
+    public Set<Rol> getRoles() {
         return roles;
     }
 
-    public void setRoles(Set<Roles> roles) {
+    public void setRoles(Set<Rol> roles) {
         this.roles = roles;
     }
-
 }

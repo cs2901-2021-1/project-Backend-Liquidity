@@ -1,4 +1,4 @@
-package com.probabilities.probabilitiesback.security.jwt;
+package com.probabilities.security.jwt;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

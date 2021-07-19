@@ -1,4 +1,4 @@
-package com.probabilities.probabilitiesback.security;
+package com.probabilities.security;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

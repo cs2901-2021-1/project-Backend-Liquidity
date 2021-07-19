@@ -1,8 +1,7 @@
-package com.probabilities.probabilitiesback.security;
+package com.probabilities.security;
 
-import com.probabilities.probabilitiesback.security.UserDetailsServiceImpl;
-import com.probabilities.probabilitiesback.security.jwt.JwtEntryPoint;
-import com.probabilities.probabilitiesback.security.jwt.JwtTokenFilter;
+import com.probabilities.security.jwt.JwtEntryPoint;
+import com.probabilities.security.jwt.JwtTokenFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

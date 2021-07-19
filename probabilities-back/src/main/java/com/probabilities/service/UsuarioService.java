@@ -1,10 +1,9 @@
-package com.probabilities.probabilitiesback.services;
+package com.probabilities.service;
 
-import com.probabilities.probabilitiesback.entity.Usuario;
-import com.probabilities.probabilitiesback.repository.UsuarioRepository;
+import com.probabilities.customexceptions.NotFoundExcep;
+import com.probabilities.entity.Usuario;
+import com.probabilities.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,7 +11,6 @@ import java.util.Optional;
 
 @Service
 @Transactional
-//@ComponentScan("com.probabilities.probabilitiesback.repository")
 public class UsuarioService {
 
     @Autowired
@@ -29,4 +27,9 @@ public class UsuarioService {
     public Usuario save(Usuario usuario){
         return usuarioRepository.save(usuario);
     }
+
+    public void delete(Usuario usuario) throws NotFoundExcep {
+        usuarioRepository.delete(usuario);
+    }
+
 }

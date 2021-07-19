@@ -1,6 +1,6 @@
-package com.probabilities.probabilitiesback.security.jwt;
+package com.probabilities.security.jwt;
 
-import com.probabilities.probabilitiesback.security.UserDetailsServiceImpl;
+import com.probabilities.security.UserDetailsServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

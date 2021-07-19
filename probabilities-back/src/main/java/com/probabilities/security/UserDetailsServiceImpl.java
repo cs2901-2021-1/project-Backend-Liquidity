@@ -1,7 +1,7 @@
-package com.probabilities.probabilitiesback.security;
+package com.probabilities.security;
 
-import com.probabilities.probabilitiesback.entity.Usuario;
-import com.probabilities.probabilitiesback.services.UsuarioService;
+import com.probabilities.entity.Usuario;
+import com.probabilities.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
