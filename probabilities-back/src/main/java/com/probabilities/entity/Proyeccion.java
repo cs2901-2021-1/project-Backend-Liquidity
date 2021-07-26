@@ -12,17 +12,23 @@ public class Proyeccion {
     @Column(name = "codigo_curso", length = 6)
     private String Codigo;
 
-    @Id
     @Column(name = "nombre")
     private String name;
+
+    @Column(name = "Area_curso")
+    private String area;
 
     @Column(name = "cantidad_alumnos_aptos")
     private int cantidad_alumnos;
 
-    public Proyeccion(String codigo, String name, int cantidad_alumnos) {
+    @Column(name = "ciclo")
+    private String ciclo = "2021-2";
+
+    public Proyeccion(String codigo, String name, int cantidad_alumnos, String ciclo) {
         Codigo = codigo;
         this.name = name;
         this.cantidad_alumnos = cantidad_alumnos;
+        this.ciclo = ciclo;
     }
 
     public String getCodigo() {
@@ -41,11 +47,27 @@ public class Proyeccion {
         this.name = name;
     }
 
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
+
     public int getCantidad_alumnos() {
         return cantidad_alumnos;
     }
 
     public void setCantidad_alumnos(int cantidad_alumnos) {
         this.cantidad_alumnos = cantidad_alumnos;
+    }
+
+    public String getCiclo() {
+        return ciclo;
+    }
+
+    public void setCiclo(String ciclo) {
+        this.ciclo = ciclo;
     }
 }
